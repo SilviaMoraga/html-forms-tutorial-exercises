@@ -1,22 +1,106 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>4Geeks Academy</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>4Geeks Academy</title>
+		<style>
+			table,
+			table * {
+				border: 1px solid black;
+			}
 
-    <style>
-        /* your code here */
-        
-    </style>
-</head>
+			tr:nth-child(1) {
+				background-color: rgb(195, 195, 255);
+			}
 
-<body>
-    <form>
-        <!-- your code here -->
-        
-    </form>
-</body>
+			#sex,
+			#bodyIndex {
+				display: flex;
+				flex-direction: column;
+			}
 
+			#sex *,
+			#bodyIndex * {
+				border: none;
+			}
+
+			#textArea * {
+				display: block;
+				border: none;
+			}
+
+			#textArea textarea {
+				border-top: 2px solid gray;
+				border-left: 2px solid gray;
+				border-bottom: 0.1px solid rgba(0, 0, 0, 0.247);
+				border-right: 0.1px solid rgba(0, 0, 0, 0.247);
+			}
+
+			button {
+				margin-left: auto;
+				margin-right: auto;
+				box-shadow: 1px 0px 0px 1px gray;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form>
+			<table>
+				<tr class="head">
+					<th>Name</th>
+					<th>Value</th>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input type="Text" /></td>
+				</tr>
+				<tr>
+					<td>Sex</td>
+					<td class="sex">
+						<div>
+							<input type="radio" id="Masculino" name="sexo" value="Masculino" />
+							<label>Male</label>
+						</div>
+						<div>
+							<input type="radio" id="Femenino" name="sexo" value="Femenino" />
+							<label>Female</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Eye color</td>
+					<td>
+						<select name="eyeColor" id="eyeColor">
+							<option value="green">Green</option>
+							<option value="brown">Brown</option>
+							<option value="blue">Blue</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Check all that apply</td>
+					<td class="checks">
+						<div>
+							<input type="checkbox" name="height" />
+							<label for="height">Over 6 feet tall</label>
+						</div>
+						<div>
+							<input type="checkbox" name="weight" />
+							<label for="weight">Over 200 pounds</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="ability">Describe your athletic ability:</label>
+						<textarea id="description" name="description" rows="4" cols="50"></textarea>
+						<button>Enter my information</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
 </html>
